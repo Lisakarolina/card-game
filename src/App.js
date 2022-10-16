@@ -73,7 +73,7 @@ function App() {
         Instructions: Klick on an image that you haven't seen before. If you're
         right and this image is new you are rewarded a point. If, however, the
         image has already been shown in this game your score is reset and a new
-        game starts.
+        game starts. You can achieve a maximum of 30 points.
       </div>
       <DisplayScore clickedImg={currentImg} />
       <div id="card-field">
