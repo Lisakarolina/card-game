@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+img {
+  border-radius: 10px;
+  border: 10px solid black;
+}
+
+img:hover {
+  cursor: pointer;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +36,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+#card-field {
+  display: grid;
+  /*flex-wrap: wrap;*/
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  /* width: 1000px; */
+  margin-left: 3%;
 }
 
 @keyframes App-logo-spin {
