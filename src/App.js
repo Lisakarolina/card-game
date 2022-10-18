@@ -1,34 +1,20 @@
 import { useEffect, useState } from "react";
 import DisplayScore from "./DisplayScore.js";
 import "./App.css";
-// require.context("./img", false, /\.jpg$/);
-console.log("did it");
-//importAll(require.context("./img/", true, /\.jpg$/));
-//let img1, img2, img3, img4, img5, img6;
 
 function importAll(r) {
   r.keys().forEach((elem, ind) => {
-    //r(elem);
-    console.log(elem);
     let imgNumber = "img" + (ind + 1).toString();
-    console.log(imgNumber);
-    //import "img" + ind.toString() from elem;             //("./img/" + elem.split("/")[1]);
     window[imgNumber] = require("./img/" + elem.split("/")[1]);
-    console.log("in window", window[imgNumber]);
-    //console.log(r(elem));
   });
-  console.log(r);
 }
 
 importAll(require.context("./img", false, /\.jpg$/));
-//let images = importAll(require.context("./img", false, /\.jpg$/));
-//console.log("images", images);
 
 function App() {
   const [currentImg, setCurrentImg] = useState({ img: "" });
   // attach event listeners
   useEffect(() => {
-    // Runs once
     document.querySelectorAll("img").forEach((item, index) => {
       item.addEventListener("click", handleClick);
     });
@@ -44,8 +30,6 @@ function App() {
   }
 
   function allocateImages() {
-    // zip
-    //[shuffleImages(arr), arr].rows[0].map((elem, ind) => [elem, rows[1][ind]]);
     zipArrays(
       [...Array(31).keys()].slice(1),
       shuffleImages([...Array(31).keys()].slice(1))
@@ -61,14 +45,13 @@ function App() {
   }
 
   function handleClick(e) {
-    console.log("clicked image", e.target.src);
     setCurrentImg({ img: e.target.src });
     allocateImages();
   }
 
   return (
     <div id="container">
-      <div id="heading">Bridges</div>
+      <div id="heading">BRIDGES</div>
       <div id="instructions">
         Instructions: Klick on an image that you haven't seen before. If you're
         right and this image is new you are rewarded a point. If, however, the
