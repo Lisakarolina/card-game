@@ -12,7 +12,7 @@ img:hover {
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -30,7 +30,7 @@ img:hover {
 
 .App-link {
   color: #61dafb;
-}
+} */
 
 #card-field {
   display: grid;
@@ -43,4 +43,16 @@ img:hover {
   background-color: lightgrey;
   padding: 20px 20px;
   position: fixed;
+  opacity: 0.8;
+}
+
+#instructions {
+  margin: 20px 10px;
+}
+
+#heading {
+  font-weight: 500;
+  font-family: "Alfa Slab One";
+  font-size: 40px;
+  margin-left: 10px;
 }
