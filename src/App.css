@@ -17,12 +17,6 @@ img:hover {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -40,18 +34,13 @@ img:hover {
 
 #card-field {
   display: grid;
-  /*flex-wrap: wrap;*/
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  /* width: 1000px; */
   margin-left: 3%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#score {
+  background-color: lightgrey;
+  padding: 20px 20px;
+  position: fixed;
 }
