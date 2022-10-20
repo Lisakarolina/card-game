@@ -53,10 +53,10 @@ function App() {
     <div id="container">
       <div id="heading">BRIDGES</div>
       <div id="instructions">
-        Instructions: Klick on an image that you haven't seen before. If you're
-        right and this image is new you are rewarded a point. If, however, the
-        image has already been shown in this game your score is reset and a new
-        game starts. You can achieve a maximum of 30 points.
+        Instructions: Klick on an image that you haven't clicked on before. If
+        you're right and this image is new you are rewarded a point. If,
+        however, the image has already been clicked on in this game your score
+        is reset and a new game starts. You can achieve a maximum of 30 points.
       </div>
       <DisplayScore clickedImg={currentImg} />
       <div id="card-field">
